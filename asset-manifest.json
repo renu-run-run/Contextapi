@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Contextapi/static/css/main.073c9b0a.css",
+    "main.js": "/Contextapi/static/js/main.705392e5.js",
+    "static/js/787.ae42a63f.chunk.js": "/Contextapi/static/js/787.ae42a63f.chunk.js",
+    "index.html": "/Contextapi/index.html",
+    "main.073c9b0a.css.map": "/Contextapi/static/css/main.073c9b0a.css.map",
+    "main.705392e5.js.map": "/Contextapi/static/js/main.705392e5.js.map",
+    "787.ae42a63f.chunk.js.map": "/Contextapi/static/js/787.ae42a63f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.705392e5.js"
+  ]
+}
