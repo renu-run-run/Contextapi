@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Context Api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The Context API is a feature of React that allows data to be passed down the component tree without the need for props drilling. It provides a way to share data between components that are not directly related to each other, without having to pass the data through every intermediate component.
+Context is essentially a global object that can hold any data that needs to be shared across multiple components. It consists of three main parts:
 
-In the project directory, you can run:
+    Context object
+    Provider component
+    Consumer component
 
-### `npm start`
+The problem Context API solves Context API solves the problem of props drilling. When props need to be passed through multiple layers of components, it can lead to code that is hard to read, understand, and maintain. Context API provides an elegant solution to this problem by allowing data to be shared directly between components without having to pass it through intermediate components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## In Context API, you can pass data from a parent component to a child component in several ways. Here are some points on how to do this:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Create a context object in the parent component using the createContext method from the React library.
 
-### `npm test`
+2. Define a state object in the parent component, which contains the data that you want to pass to the child component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Wrap the child component inside the context object using the Provider component.
 
-### `npm run build`
+4. Pass the state object as a value prop to the Provider component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. In the child component, use the useContext hook to access the data that was passed from the parent component.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. You can also pass down functions from the parent component to the child component using the same approach. These functions can be used to update the state in the parent component, which in turn updates the data passed down to the child component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. If you need to pass down data from multiple parent components to the same child component, you can use nested Providers. In this case, the child component will have access to all the data provided by its parent components.
 
-### `npm run eject`
+8. It's important to note that the data passed down through context is not automatically re-rendered when it changes. To ensure that the child component re-renders when the data changes, you can use the useEffect hook and specify the state object as a dependency.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall, the Context API provides a powerful way to pass data between components without having to pass it down through every level of the component tree.
